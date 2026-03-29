@@ -1,25 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "@/contexts/AuthProvider";
-import ProtectedRoute from "@/components/ProtectedRoute";
-import Login from "@/pages/Login";
-import Home from "@/pages/Home";
-
 export default function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/*"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </AuthProvider>
-    </BrowserRouter>
+    <main className="app-shell">
+      <section className="hero">
+        <p className="eyebrow">Build restored</p>
+        <h1>Minhas Viagens</h1>
+        <p className="description">
+          O scaffold web mínimo foi recriado para o projeto voltar a publicar no Lovable.
+        </p>
+      </section>
+    </main>
   );
 }
