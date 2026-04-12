@@ -12,7 +12,7 @@ import {
 } from "date-fns";
 
 export default function Dashboard() {
-  const { } = useAuth();
+  useAuth();
   const { profile } = useProfile();
   const { trips } = useTrips();
   const navigate = useNavigate();
