@@ -7,12 +7,12 @@ import { formatCurrency } from "@/lib/formatCurrency";
 import TripCard from "@/components/TripCard";
 import { Plus, TrendingUp, DollarSign, Truck, BarChart3, User } from "lucide-react";
 import {
-  startOfMonth, endOfMonth, startOfWeek, endOfWeek, startOfYear, endOfYear,
-  isWithinInterval, parseISO, isToday, subWeeks
+  startOfMonth, endOfMonth, startOfYear, endOfYear,
+  isWithinInterval, parseISO, isToday
 } from "date-fns";
 
 export default function Dashboard() {
-  const { user } = useAuth();
+  const { } = useAuth();
   const { profile } = useProfile();
   const { trips } = useTrips();
   const navigate = useNavigate();

@@ -2,8 +2,7 @@ import { useTrips } from "@/hooks/useTrips";
 import { formatCurrency } from "@/lib/formatCurrency";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { format, parseISO } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import { format } from "date-fns";
 import { useMemo, useState } from "react";
 
 export default function Reports() {
