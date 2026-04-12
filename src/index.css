@@ -1,30 +1,66 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --brand-dark: #0f2b47;
-  --brand: #1e4b73;
-  --brand-light: #2a6a9e;
+  --background: 208 65% 11%;
+  --foreground: 0 0% 100%;
+  --card: 208 51% 18%;
+  --card-foreground: 0 0% 100%;
+  --muted: 206 33% 75%;
+  --accent: 206 59% 29%;
+  --accent-foreground: 0 0% 100%;
+  --border: 206 44% 34%;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100%;
-  margin: 0;
 }
 
 body {
+  margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7fa;
-  color: #1a1a1a;
+  background:
+    radial-gradient(circle at top, hsl(var(--accent) / 0.45), transparent 40%),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
-/* Dark mode */
-.dark body, .dark {
-  background: var(--brand-dark);
-  color: #fff;
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.hero {
+  width: min(100%, 40rem);
+  padding: 2rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.5rem;
+  background: hsl(var(--card) / 0.9);
+  box-shadow: 0 20px 60px hsl(var(--background) / 0.35);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: hsl(var(--muted));
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.description {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: hsl(var(--muted));
 }
